@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヒンバス釣りカウンター</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+    <style type="text/css">
+        .fixed {
+            table-layout: fixed;
+            width: calc(25px * 18);
+            height: calc(25px * 34);
+        }
+
+        .cell {
+            width: 25px;
+            height: 25px;
+            text-align: center;
+        }
+
+        .rock {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>ヒンバス釣りカウンター</h1>
+    <p>
+        左クリックでカウントアップ <br>
+        右クリックでカウントダウン
+    </p>
+
+    <div>
+        <button id="resetButton">reset</button>
+        <table border="1" class="fixed">
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell rock"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function() {
+            let grid = (() => {
+                const val = localStorage.getItem("grid");
+                if (val === null) return Array.from(Array(34), () => Array(18).fill(0));
+                return JSON.parse(val);
+            })();
+
+            function save() {
+                localStorage.setItem("grid", JSON.stringify(grid));
+            }
+
+            $("#resetButton").click(function() {
+                grid = Array.from(Array(34), () => Array(18).fill(0));
+                save();
+                $(".cell").text("");
+            });
+
+            $(".cell").each(function() {
+                const self = $(this);
+                const x = self.index();
+                const y = self.parent().index();
+
+                if (grid[y][x] == 0) self.text("");
+                else self.text(`${grid[y][x]}`);
+
+                self.mousedown(function(e) {
+                    if (self.hasClass("rock")) return;
+
+                    switch(e.button) {
+                        case 0: grid[y][x]++; break;
+                        case 2: grid[y][x]--; break;
+                    }
+                    if (grid[y][x] < 0) grid[y][x] = 0;
+
+                    if (grid[y][x] == 0) self.text("");
+                    else self.text(`${grid[y][x]}`);
+
+                    save();
+                });
+                self.contextmenu(() => false);
+            });
+        })
+    </script>
+</body>
+</html>
